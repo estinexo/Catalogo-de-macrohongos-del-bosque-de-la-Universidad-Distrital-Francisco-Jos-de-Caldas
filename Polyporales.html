@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletales</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="pagina principal.html">Catalogo de macrohongos de la macarena
+                y Vivero de la Universidad Distrital Francisco Jose de Caldas</a></h1>
+        <nav>
+            <ul>
+                <li><a href="Agaricales.html">Agaricales</a></li>
+                <li><a href="Auriculariales.html">Auriculariales</a></li>
+                <li><a href="Boletales.html">Boletales</a></li>
+                <li><a href="Himenochateales.html">Himenochateales</a></li>
+                <li><a href="Polyporales.html">Polyporales</a></li>
+                <li><a href="Russulales.html">Russulales</a></li>
+                <li><a href="Tremellares.html">Tremellares</a></li>
+                <li><a href="buscador.html">Buscador</a></li>
+                <li><a href="Ascomicetos.html">Ascomicetos</a></li>
+            </ul>
+        </nav>
+        <a href="buscador.html" title="micosapiens-SILEAT">
+            <img src="Pagina_principal/micosapiens.jpg" class="logo" alt="micosapiens-SILEAT">
+        </a>
+    </header>
+
+    <main>
+        <section id="Boletales">
+    <h2>Boletales</h2>
+    <p> Aqui ira la informacion de Boletales.
+    </p>
+    
+    <!-- NUEVA ESTRUCTURA DEL CARRUSEL -->
+    <div class="carrusel-contenedor">
+        <div class="carrusel-slides">
+            <!-- Slide 1 -->
+            <figure class="slide active">
+                <img src="Boletales/Boletal_1.jpg" alt="Boletal_1" class="Boletales_1">
+                <figcaption>Fotografía del <strong>bosque de la macarena</strong> <br> 
+                    fotografia tomada por <strong>Estiben Pinzón</strong>
+                </figcaption>
+            </figure>
+             <figure class="slide">
+                <img src="Boletales/Boletal_2.jpg" alt="Boletal_2" class="Boletales_2">
+                <figcaption>Fotografía de <em>Auricularia sp</em>  en el <strong>bosque de la macarena</strong> <br> 
+                    fotografia tomada por <strong>Estiben Pinzón</strong>
+                </figcaption>
+            </figure>
+            <figure class="slide">
+                <img src="Boletales/Boletal_3.jpg" alt="Boletal_3" class="Boletales_3">
+                <figcaption>Fotografía de <em>Auricularia sp</em>  en el <strong>bosque de la macarena</strong> <br> 
+                    fotografia tomada por <strong>Estiben Pinzón</strong>
+                </figcaption>
+            </figure>
+            <figure class="slide">
+                <img src="Boletales/Boletal_4.jpg" alt="Boletal_4" class="Boletales_4">
+                <figcaption>Fotografía de <em>Auricularia sp</em>  en el <strong>bosque de la macarena</strong> <br> 
+                    fotografia tomada por <strong>Estiben Pinzón</strong>
+                </figcaption>
+            </figure>
+             <figure class="slide">
+                <img src="Boletales/Boletal_5.jpg" alt="Boletal_5" class="Boletales_5">
+                <figcaption>Fotografía de <em>Auricularia sp</em>  en el <strong>bosque de la macarena</strong> <br> 
+                    fotografia tomada por <strong>Estiben Pinzón</strong>
+                </figcaption>
+            </figure>
+        </div>
+        
+        <!-- Botones de navegación (Flechas) -->
+        <button class="carrusel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="carrusel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+    </div>
+        <!-- SECCIÓN 4: TABLA DE FAMILIAS -->
+        <section id="familias_Boletales">
+            <h2>Familias de <strong><em>Boletales</em></strong> en el bosque de la <strong>Macarena</strong> y <strong>Vivero</strong></h2>
+            <div class="tabla-responsive">
+                <table class="tabla-familias">
+                    <thead>
+                        <tr>
+                            <th><a href="Boletaceae.html">Boletaceae</a></th>
+                            <th><a href="Sclerodermataceae.html">Sclerodermataceae</a></th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="scroll-hint">← Desliza horizontal → (móvil)</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Referencias: © 2026 Micosapiens-SILEAT</p>
+        <a href="https://www.instagram.com/micosapiens_sileat..." class="instagram-link" target="_blank">
+            <i class="fab fa-instagram"></i> Síguenos: @micosapiens
+        </a>
+    </footer>
+     <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll(".slide");
+        const nextBtn = document.querySelector(".carrusel-btn.next");
+        const prevBtn = document.querySelector(".carrusel-btn.prev");
+        let currentIndex = 0;
+        let isAnimating = false;
+
+        function mostrarSlide(index, direccion) {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const slideActual = slides[currentIndex];
+            const siguienteSlide = slides[index];
+
+            // Animación de salida del slide actual
+            gsap.to(slideActual, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    slideActual.classList.remove("active");
+                    gsap.set(slideActual, { visibility: "hidden" });
+                }
+            });
+
+            // Animación de entrada del nuevo slide
+            siguienteSlide.classList.add("active");
+            gsap.set(siguienteSlide, { visibility: "visible" });
+            gsap.to(siguienteSlide, {
+                opacity: 1,
+                duration: 0.5,
+                onComplete: () => {
+                    currentIndex = index;
+                    isAnimating = false;
+                }
+            });
+        }
+
+        nextBtn.addEventListener("click", () => {
+            let nextIndex = (currentIndex + 1) % slides.length;
+            mostrarSlide(nextIndex, "next");
+        });
+
+        prevBtn.addEventListener("click", () => {
+            let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+            mostrarSlide(prevIndex, "prev");
+        });
+
+        // Opcional: Cambio automático cada 5 segundos
+        setInterval(() => {
+            if (!isAnimating) {
+                let nextIndex = (currentIndex + 1) % slides.length;
+                mostrarSlide(nextIndex, "next");
+            }
+        }, 5000);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Macrohongos - Catálogo La Macarena</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="pagina principal.html">Catálogo de macrohongos de la Macarena
+                y Vivero de la Universidad Distrital Francisco José de Caldas</a></h1>
+        <nav>
+            <ul>
+                <li><a href="Agaricales.html">Agaricales</a></li>
+                <li><a href="Auriculariales.html">Auriculariales</a></li>
+                <li><a href="Boletales.html">Boletales</a></li>
+                <li><a href="Polyporales.html">Polyporales</a></li>
+                <li><a href="Russulales.html">Russulales</a></li>
+                <li><a href="Tremellares.html">Tremellares</a></li>
+                <li><a href="buscador.html" class="activo">Buscador</a></li>
+                <li><a href="Ascomicetos.html">Ascomicetos</a></li>
+            </ul>
+        </nav>
+        <a href="sileat.html" title="micosapiens-SILEAT">
+            <img src="Pagina_principal/micosapiens.jpg" class="logo" alt="micosapiens-SILEAT">
+        </a>
+    </header>
+
+    <main>
+        <section id="buscador-principal">
+            <h2><i class="fas fa-search"></i> Buscador de Especies</h2>
+            <p>Busca hongos por nombre científico, nombre común, familia u orden. Escribe al menos 2 letras para ver sugerencias.</p>
+
+            <div class="buscador-contenedor">
+                <div class="buscador-input-wrapper">
+                    <i class="fas fa-search buscador-icon"></i>
+                    <input type="text" id="buscador-input" placeholder="Ej: Amanita muscaria, Amanita gemmata, Pleurotus ostreatus..." autocomplete="off" aria-label="Buscar especies de hongos">
+                    <button id="buscador-limpiar" class="buscador-btn-limpiar" aria-label="Limpiar búsqueda"><i class="fas fa-times"></i></button>
+                </div>
+                <div id="buscador-sugerencias" class="buscador-sugerencias" role="listbox" aria-label="Sugerencias de especies"></div>
+            </div>
+
+            <div class="buscador-filtros">
+                <label><input type="checkbox" id="filtro-comestibles" value="comestible"> <span>Solo comestibles</span></label>
+                <label><input type="checkbox" id="filtro-toxicos" value="toxico"> <span>Solo tóxicos</span></label>
+                <label><input type="checkbox" id="filtro-micorrizicos" value="micorrizico"> <span>Solo micorrízicos</span></label>
+                <label><input type="checkbox" id="filtro-saprofitos" value="saprofito"> <span>Solo saprófitos</span></label>
+            </div>
+
+            <div id="buscador-resultados" class="buscador-resultados" role="region" aria-label="Resultados de búsqueda"></div>
+        </section>
+
+        <section id="acceso-rapido">
+            <h2>Acceso Rápido por Géneros Destacados</h2>
+            <div class="generos-grid" id="generos-grid"></div>
+        </section>
+
+        <section id="indice-completo">
+            <h2>Índice Completo de Especies Registradas</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="agaricales">Agaricales (13 familias)</button>
+                <button class="tab-btn" data-tab="boletales">Boletales (2 familias)</button>
+                <button class="tab-btn" data-tab="russulales">Russulales (3 familias)</button>
+                <button class="tab-btn" data-tab="otros">Otros órdenes</button>
+            </div>
+            <div id="tab-agaricales" class="tab-content active"></div>
+            <div id="tab-boletales" class="tab-content"></div>
+            <div id="tab-russulales" class="tab-content"></div>
+            <div id="tab-otros" class="tab-content"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Referencias: © 2026 Micosapiens-SILEAT</p>
+        <a href="https://www.instagram.com/micosapiens_sileat/" class="instagram-link" target="_blank">
+            <i class="fab fa-instagram"></i> Síguenos: @micosapiens
+        </a>
+    </footer>
+
+    <script src="buscador.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strophariaceae</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="../pagina principal.html">Catalogo de macrohongos de la macarena
+                y Vivero de la Universidad Distrital Francisco Jose de Caldas</a></h1>
+        <nav>
+            <ul>
+                <li><a href="../Agaricales.html">Agaricales</a></li>
+                <li><a href="../Auriculariales.html">Auriculariales</a></li>
+                <li><a href="../Boletales.html">Boletales</a></li>
+                <li><a href="Himenochateales.html">Himenochateales</a></li>
+                <li><a href="../Polyporales.html">Polyporales</a></li>
+                <li><a href="../Russulales.html">Russulales</a></li>
+                <li><a href="../Tremellares.html">Tremellares</a></li>
+                <li><a href="../Ascomicetos.html">Ascomicetos</a></li>
+            </ul>
+        </nav>
+        <a href="../sileat.html" title="micosapiens-SILEAT">
+            <img src="../Pagina_principal/micosapiens.jpg" class="logo" alt="micosapiens-SILEAT">
+        </a>
+    </header>
+
+    <main>
+        <section id="Strophariaceae">
+            <h2>Strophariaceae</h2>
+            <p>La familia <strong><em>Strophariaceae</em></strong> agrupa hongos con anillo membranoso, esporas marrones a violáceas, láminas adnatas. Géneros: <em>Stropharia</em>, <em>Hypholoma</em>, <em>Pholiota</em>, <em>Kuehneromyces</em>. Saprófitos en madera y suelo.</p>
+
+            <div class="carrusel-contenedor">
+                <div class="carrusel-slides">
+                    <figure class="slide active">
+                        <img src="../Agaricales/Agarical_1.jpg" alt="Stropharia sp" class="Strophariaceae">
+                        <figcaption>Fotografía de <strong><em>Stropharia sp</em></strong> en el <strong>bosque de la Macarena</strong><br>fotografía tomada por <strong>Estiben Pinzón</strong></figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="../Agaricales/Agarical_2.jpg" alt="Hypholoma sp" class="Strophariaceae">
+                        <figcaption>Fotografía de <strong><em>Hypholoma sp</em></strong> en el <strong>bosque de la Macarena</strong><br>fotografía tomada por <strong>Estiben Pinzón</strong></figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="../Agaricales/Agarical_3.jpg" alt="Pholiota sp" class="Strophariaceae">
+                        <figcaption>Fotografía de <strong><em>Pholiota sp</em></strong> en el <strong>bosque de la Macarena</strong><br>fotografía tomada por <strong>Estiben Pinzón</strong></figcaption>
+                    </figure>
+                </div>
+                <button class="carrusel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="carrusel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <section id="taxonomia">
+                <h3>Especies registradas en la zona</h3>
+                <ul>
+                    <li><em>Stropharia aeruginosa</em> — Verde azulado, anillo fugaz, en suelo húmedo</li>
+                    <li><em>Hypholoma fasciculare</em> — Amarillo-verde, fasciculado, tóxico, sobre tocones</li>
+                    <li><em>Pholiota squarrosa</em> — Escamoso, anillo, sobre madera viva y muerta</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>Referencias: © 2026 Micosapiens-SILEAT</p>
+        <a href="https://www.instagram.com/micosapiens_sileat/" class="instagram-link" target="_blank">
+            <i class="fab fa-instagram"></i> Síguenos: @micosapiens
+        </a>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll(".slide");
+            const nextBtn = document.querySelector(".carrusel-btn.next");
+            const prevBtn = document.querySelector(".carrusel-btn.prev");
+            let currentIndex = 0;
+            let isAnimating = false;
+
+            function mostrarSlide(index, direccion) {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                const slideActual = slides[currentIndex];
+                const siguienteSlide = slides[index];
+
+                gsap.to(slideActual, {
+                    opacity: 0,
+                    duration: 0.5,
+                    onComplete: () => {
+                        slideActual.classList.remove("active");
+                        gsap.set(slideActual, { visibility: "hidden" });
+                    }
+                });
+
+                siguienteSlide.classList.add("active");
+                gsap.set(siguienteSlide, { visibility: "visible" });
+                gsap.to(siguienteSlide, {
+                    opacity: 1,
+                    duration: 0.5,
+                    onComplete: () => {
+                        currentIndex = index;
+                        isAnimating = false;
+                    }
+                });
+            }
+
+            nextBtn.addEventListener("click", () => {
+                let nextIndex = (currentIndex + 1) % slides.length;
+                mostrarSlide(nextIndex, "next");
+            });
+
+            prevBtn.addEventListener("click", () => {
+                let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                mostrarSlide(prevIndex, "prev");
+            });
+
+            setInterval(() => {
+                if (!isAnimating) {
+                    let nextIndex = (currentIndex + 1) % slides.length;
+                    mostrarSlide(nextIndex, "next");
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
