@@ -58,7 +58,7 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: true,
-        imagen: "Amanitas/validae/validae_1.jpg",
+        imagen: "Amanitas/validae/validae_4.jpg",
         descripcion: "Sombrero parduzco con verrugas grisáceas, anillo persistente, volva saciforme. Potencialmente tóxica.",
     },
     {
@@ -68,8 +68,8 @@ const ESPECIES = [
         orden: "Polyporales",
         tipo: TIPO.SAPROFITO,
         comestible: false,
-        toxico: true,
-        imagen: "Amanitas/muscaria/muscaria_1.jpg",
+        toxico: false,
+        imagen: "Polyporales/Trametes.jpg",
         descripcion: "Descripción corta trametes.",
     },
     
@@ -83,8 +83,30 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: true,
-        imagen: "Amanitas/muscaria/muscaria_2.jpg",
+        imagen: "Agaricales/Agaricus.jpg",
         descripcion: "Descripcion Agaricus leptocaulis.",
+    },
+    {
+        nombre: "Lepiota sp.",
+        nombreComun: "Desconocido",
+        familia: "Agaricaceae",
+        orden: "Agaricales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: true,
+        imagen: "Agaricales/Lepiota.jpg",
+        descripcion: "Descripcion lepiota.",
+    },
+    {
+        nombre: "Calvatia aff",
+        nombreComun: "Desconocido",
+        familia: "Agaricaceae",
+        orden: "Agaricales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: true,
+        imagen: "Agaricales/Calvatia.jpg",
+        descripcion: "Descripcion calvatia.",
     },
     {
         nombre: "Lepista nuda",
@@ -94,7 +116,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: true,
         toxico: false,
-        imagen: "Agaricales/Agarical_3.jpg",
+        imagen: "Agaricales/Lepista.jpg",
         descripcion: "Sombrero violeta-azulado, pie con tonos azulados. Comestible, muy apreciada en cocina. Crece en anillos de hadas.",
     },
     {
@@ -105,7 +127,7 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: true,
-        imagen: "Agaricales/Agarical_4.jpg",
+        imagen: "Ascomicetos/Leotia.jpg",
         descripcion: "Descripcion leotia.",
     },
     {
@@ -116,7 +138,7 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_1.jpg",
+        imagen: "Boletales/Xerocomus.jpg",
         descripcion: "Descripcion de Xerocomus.",
     },
     {
@@ -127,7 +149,7 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_2.jpg",
+        imagen: "Agaricales/Cortinarius.jpg",
         descripcion: "Descripcion Cortinarius.",
     },
 
@@ -139,21 +161,10 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_3.jpg",
+        imagen: "Agaricales/Neocampanella.jpg",
         descripcion: "Descripcion neocampanella",
     },
-    {
-        nombre: "Cortinarius sp",
-        nombreComun: "Cortinario",
-        familia: "Cortinariaceae",
-        orden: "Agaricales",
-        tipo: TIPO.MICORRIZICO,
-        comestible: false,
-        toxico: true,
-        imagen: "Agaricales/Agarical_4.jpg",
-        descripcion: "Sombrero canela claro, láminas canela, pie fibrilloso. Micorrícica. Algunas especies de Cortinarius son tóxicas.",
-    },
-
+    
     // --- Boletaceae ---
     {
         nombre: "Chalciporus piperatus",
@@ -175,7 +186,7 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: true,
-        imagen: "Russulales/russulal_1.jpg",
+        imagen: "Russulales/Russula.jpg",
         descripcion: "Sombrero rojo brillante, láminas blancas, pie blanco. Causa vómitos al consumirse. Micorrícica con árboles.",
     },
     {
@@ -186,18 +197,18 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: false   ,
-        imagen: "Russulales/russulal_2.jpg",
+        imagen: "Russulales/Lactarius.jpg",
         descripcion: "Sombrero de color cafe tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
     },
     {
         nombre: "Stereum sp",
         nombreComun: "Desconocido",
-        familia: "Russulaceae",
+        familia: "Stereaceae",
         orden: "Russulales",
-        tipo: TIPO.MICORRIZICO,
+        tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false   ,
-        imagen: "Russulales/russulal_2.jpg",
+        imagen: "Russulales/Stereum_sp.jpg",
         descripcion: "Sombrero de color cafe tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
     },
 
@@ -223,7 +234,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_1.jpg",
+        imagen: "Agaricales/schizophyllum .jpg",
         descripcion: "Pequeño, con himenio de pliegues largos y bifurcados, color blanco a gris. Saprófito sobre madera muerta. Cosmopolita.",
     },
 
@@ -236,20 +247,20 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_2.jpg",
+        imagen: "Agaricales/Marasmius.jpg",
         descripcion: "Pequeña, sombrero marrón con fibras pálidas, láminas blancas, pie delgado. Reviviscente (se rehidrata con lluvia). Comestible.",
     },
 
     // ---  crepidotaceae---
     {
-        nombre: "Crepidots",
+        nombre: "Crepidotus",
         nombreComun: "Desconocido",
         familia: "Crepidotaceae",
         orden: "Agaricales",
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_3.jpg",
+        imagen: "Agaricales/Crepidotus.jpg",
         descripcion: "Sombrero en forma de abanico u ostra, blanco a gris, láminas decurrentes, pie lateral o ausente. Saprófito sobre madera de roble.",
     },
 
@@ -274,7 +285,7 @@ const ESPECIES = [
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_3.jpg",
+        imagen: "Agaricales/Inocybe.jpg",
         descripcion: "Sombrero blanco con fibras pálidos, láminas blancas, pie corto. Contiene muscarina. Micorrícica con Quercus.",
     },
 
@@ -303,15 +314,28 @@ const ESPECIES = [
     },
 
     // --- Hydnangiaceae ---
-    {
-        nombre: "Irpex rossetiformes",
+     {
+        nombre: "laccaria sp",
         nombreComun: "Desconocido",
         familia: "Hydnangiaceae",
         orden: "Agaricales",
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: true,
-        imagen: "Agaricales/Agarical_2.jpg",
+        imagen: "Agaricales/Laccaria.jpg",
+        descripcion: "Himenio en forma de laminas distantes separadas de coloración roja, esporada blanca, de tamaño pequeño y en asociación con accacias.",
+    },
+    //-- Irpicaceae ---
+
+    {
+        nombre: "Irpex rossetiformes",
+        nombreComun: "Desconocido",
+        familia: "Irpicaceae",
+        orden: "Agaricales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: true,
+        imagen: "Polyporales/Irpex.jpg",
         descripcion: "Himenoforo de dientes (hidnoides) en lugar de láminas, sombrero convexo, color crema a ocre. Micorrícico, comestible.",
     },
 
@@ -337,7 +361,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_1.jpg",
+        imagen: "Agaricales/Parassola.jpg",
         descripcion: "Sombrero plisado como abanico, deliquescente, negro al madurar. Saprófito en césped y suelo descubierto.",
     },
     {
@@ -348,9 +372,32 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_2.jpg",
+        imagen: "Agaricales/Coprinellus_disseminatus.jpg",
         descripcion: "Crece en enjambres sobre tocones y madera. Sombrero pequeño gris, láminas negras que se liquefacen. Deliquescente.",
     },
+     {
+        nombre: "Coprinellus micaceus",
+        nombreComun: "Desconocido",
+        familia: "Psathyrellaceae",
+        orden: "Agaricales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: false,
+        imagen: "Agaricales/Coprinellus_micaceae.jpg",
+        descripcion: "Gregario entre materia organica en descomposición. Sombrero mediano naranja, láminas negras que se liquefacen. Deliquescente.",
+    },
+     {
+        nombre: "Psathyrella longipes",
+        nombreComun: "Desconocido",
+        familia: "Psathyrellaceae",
+        orden: "Agaricales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: false,
+        imagen: "Agaricales/Psathyrella_longipes.jpg",
+        descripcion: "Colocar información de Psathyrella longipes",
+    },
+
 
     // --- Strophariaceae (extra) ---
     {
@@ -364,6 +411,18 @@ const ESPECIES = [
         imagen: "Agaricales/Agarical_4.jpg",
         descripcion: "Sombrero viscoso y pegajoso de color morado, anillo membranoso, láminas ferruginosas. Saprófita sobre madera de roble.",
     },
+    {
+    nombre: "Leratiomyces ceres",
+        nombreComun: "Tapita roja",
+        familia: "Strophariaceae",
+        orden: "Agaricales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: true,
+        imagen: "Agaricales/Leratiomyces.jpg",
+        descripcion: "Sobrero convexo  de color roj con presencia de escamas en el margen,no presenta anillo, láminas de color gris. Saprófito.",
+    },
+
 
     // --- Pleurotaceae (extra) ---
     {
@@ -374,7 +433,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_1.jpg",
+        imagen: "Agaricales/Honhembuhellia.jpg",
         descripcion: "Forma de pétalo o abanico, cuerpo fructífero gelatinoso. Saprófita sobre madera, nematófaga.",
     },
     {
@@ -385,7 +444,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Agarical_2.jpg",
+        imagen: "Agaricales/Ressupinatus.jpg",
         descripcion: "Hongo muy pequeño, aplanado, adherido a la madera, color gris a marrón. Saprófito sobre madera en descomposición.",
     },
 
@@ -395,10 +454,10 @@ const ESPECIES = [
         nombreComun: "Escleroderma",
         familia: "Sclerodermataceae",
         orden: "Boletales",
-        tipo: TIPO.MICORRIZICO,
+        tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: true,
-        imagen: "Boletales/Boletal_3.jpg",
+        imagen: "Boletales/Scleroderma.jpg",
         descripcion: "Cuerpo fructífero subgloboso, peridio liso que se abre en estrellas. Micorrícico, tóxico.",
     },
 
@@ -424,7 +483,7 @@ const ESPECIES = [
         tipo: TIPO.PARASITO,
         comestible: true,
         toxico: false,
-        imagen: "Tremellas/tremella_2.jpg",
+        imagen: "Ascomicetos/Tremella.jpg",
         descripcion: "Cuerpo fructífero gelatinoso, color amarillo anaranjado, forma irregular. Parásito de otros hongos corticiáceos.",
     },
     // --- Stereaceae ---
@@ -436,7 +495,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Russulales/russulal_3.jpg",
+        imagen: "Russulales/Stereum.jpg",
         descripcion: "Hongo corticiáceo, costras semicirculares, superficie peluda, color marrón. Saprófito sobre madera muerta.",
     },
 
@@ -449,8 +508,44 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Russulales/russulal_1.jpg",
+        imagen: "Russulales/Artomyces.jpg",
         descripcion: "Pequeño hongo con sombrero convexo cubierto de escamas, pie lateral, himenio de dientes. Saprófito sobre conos de Pinus.",
+    },
+    // --- Geastreaceae---
+    {
+        nombre: "Geastrum sp",
+        nombreComun: "Desconocido",
+        familia: "Geastreaceae",
+        orden: "Geastreales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: false,
+        imagen: "Geastreales/Geastrum.jpg",
+        descripcion: "Hongo en forma de estrella, esporada cafe a negra, rellenar info.",
+    },
+    // ---- Ascomicetos --
+     {
+        nombre: "Cordierites sp",
+        nombreComun: "Desconocido",
+        familia: "Cordieritidaceae",
+        orden: "Cyttariales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: false,
+        imagen: "Ascomicetos/Cordierites.jpg",
+        descripcion: "Colocar informacion cordierites.",
+    },
+    //-- Himenochateales --
+    {
+        nombre: "Rickenella",
+        nombreComun: "Desconocido",
+        familia: "Rickenellaceae",
+        orden: "Himenochaetales",
+        tipo: TIPO.SAPROFITO,
+        comestible: false,
+        toxico: false,
+        imagen: "Himenochaetales/Rickenella.jpg",
+        descripcion: "Colocar informacion Ricknella.",
     },
 ];
 
@@ -463,13 +558,14 @@ const ORDENES = Object.freeze({
             "Amanitaceae", "Agaricaceae", "Bolbitaceae", "Cortinariaceae",
             "Hydnangiaceae", "Inocybaceae", "Marasmiaceae", "Schizophyllaceae",
             "Strophariaceae", "Pleurotaceae", "Psathyrellaceae", "Tricholomataceae",
+            "Crepidotaceae",
         ],
         color: "#556b2f",
     },
     Boletales: {
         familias: ["Boletaceae", "Sclerodermataceae"],
         color: "#bda387",
-    },
+    },  
     Russulales: {
         familias: ["Russulaceae", "Stereaceae", "Auriscalpiaceae"],
         color: "#4a3e3d",
@@ -483,9 +579,23 @@ const ORDENES = Object.freeze({
         color: "#c9a87c",
     },
     Polyporales: {
-        familias: ["Polyporaceae", "Fomitopsidaceae"],
+        familias: ["Polyporaceae", "Fomitopsidaceae", "Irpicaceae"
+
+        ],
         color: "#7a6b5d",
     },
+    Geastreales: {
+        familias: ["Geastraceae"],
+        color: "#504494",
+    },
+    Cyttariales: {
+        familias: ["Cordieritidaceae"],
+        color: "#945244",
+    },
+    Himenochaetales: {
+        familias: ["Rickenellaceae"],
+        color: "#F08A0C",
+    }
 });
 
 // ============================================================================
@@ -497,7 +607,7 @@ const GENEROS_DESTACADOS = Object.freeze([
     { nombre: "Cortinarius", color: "#74a" },
     { nombre: "Chalciporus", color: "#c84" },
     { nombre: "Russula", color: "#48c" },
-    { nombre: "Honhembuhelia", color: "#4aa" },
+    { nombre: "Coprinellus", color: "#4aa" },
     { nombre: "Tremella", color: "#e8c" },
     { nombre: "Auricularia", color: "#a8a" },
 ]);
@@ -643,12 +753,16 @@ function renderizarGeneros() {
 }
 
 function renderizarIndice() {
-    Object.entries(ORDENES).forEach(([orden, datos]) => {
-        const tabId = orden.toLowerCase().replace("ales", "ales");
-        const tabContent = document.getElementById(`tab-${tabId}`);
-        if (!tabContent) return;
+    const tabsPrincipales = ["agaricales", "boletales", "russulales"];
 
-        tabContent.innerHTML = `
+    Object.entries(ORDENES).forEach(([orden, datos]) => {
+        const tabId = orden.toLowerCase();
+        // Los 3 principales van a su propio tab
+        if (tabsPrincipales.includes(tabId)) {
+            const tabContent = document.getElementById(`tab-${tabId}`);
+            if (!tabContent) return;
+
+            tabContent.innerHTML = `
             <h3>${orden}</h3>
             <div class="familias-grid">
                 ${datos.familias
@@ -664,7 +778,36 @@ function renderizarIndice() {
                     .join("")}
             </div>
         `;
+        }
     });
+
+    // Todo lo demás (los de menos familias) va a "Otros órdenes"
+    const otros = Object.entries(ORDENES).filter(
+        ([orden]) => !tabsPrincipales.includes(orden.toLowerCase())
+    );
+    const tabOtros = document.getElementById("tab-otros");
+    if (tabOtros) {
+        tabOtros.innerHTML = otros
+            .map(
+                ([orden, datos]) => `
+            <h3>${orden}</h3>
+            <div class="familias-grid">
+                ${datos.familias
+                    .map((familia) => {
+                        const cantidad = ESPECIES.filter((e) => e.familia === familia).length;
+                        return `
+                            <div class="familia-card">
+                                <h4><a href="agaricales-familias/${familia}.html">${familia}</a></h4>
+                                <p>${cantidad} especie${cantidad > 1 ? "s" : ""}</p>
+                            </div>
+                        `;
+                    })
+                    .join("")}
+            </div>
+        `
+            )
+            .join("");
+    }
 }
 
 // ============================================================================
