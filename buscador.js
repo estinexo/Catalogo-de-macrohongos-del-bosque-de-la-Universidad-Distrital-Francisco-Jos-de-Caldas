@@ -72,6 +72,9 @@ const ESPECIES = [
         imagen: "Amanitas/muscaria/muscaria_1.jpg",
         descripcion: "Descripción corta trametes.",
     },
+    
+
+    // --- Agaricaceae ---
     {
         nombre: "Agaricus",
         nombreComun: "Champiñones o callampas",
@@ -82,30 +85,6 @@ const ESPECIES = [
         toxico: true,
         imagen: "Amanitas/muscaria/muscaria_2.jpg",
         descripcion: "Descripcion Agaricus leptocaulis.",
-    },
-
-    // --- Agaricaceae ---
-    {
-        nombre: "Russula",
-        nombreComun: "Hongo de tallo de tiza",
-        familia: "Russulaceae",
-        orden: "Russulales",
-        tipo: TIPO.MICORRIZICO,
-        comestible: false,
-        toxico:     true,
-        imagen: "Agaricales/Agarical_1.jpg",
-        descripcion: "Descripicion Russula",
-    },
-    {
-        nombre: "Lactarius",
-        nombreComun: "hongo latex",
-        familia: "Russulaceae",
-        orden: "Russulales",
-        tipo: TIPO.MICORRIZICO,
-        comestible: false,
-        toxico: true,
-        imagen: "Agaricales/Agarical_2.jpg",
-        descripcion: "Descripcion Lactarius",
     },
     {
         nombre: "Lepista nuda",
@@ -164,8 +143,8 @@ const ESPECIES = [
         descripcion: "Descripcion neocampanella",
     },
     {
-        nombre: "Cortinarius cinnamomeus",
-        nombreComun: "Cortinario canela",
+        nombre: "Cortinarius sp",
+        nombreComun: "Cortinario",
         familia: "Cortinariaceae",
         orden: "Agaricales",
         tipo: TIPO.MICORRIZICO,
@@ -177,32 +156,20 @@ const ESPECIES = [
 
     // --- Boletaceae ---
     {
-        nombre: "Boletus edulis",
-        nombreComun: "Cepa o Boletus",
-        familia: "Boletaceae",
-        orden: "Boletales",
-        tipo: TIPO.MICORRIZICO,
-        comestible: true,
-        toxico: false,
-        imagen: "Boletales/Boletal_1.jpg",
-        descripcion: "Sombrero marrón, poro blanco que enrojece al tocar, pie reticulado. El rey de los hongos, micorrícico con Quercus y Pinus.",
-    },
-    {
-        nombre: "Boletus satanas",
-        nombreComun: "Satán boletus",
+        nombre: "Chalciporus piperatus",
+        nombreComun: "Boleto picante",
         familia: "Boletaceae",
         orden: "Boletales",
         tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: true,
-        imagen: "Boletales/Boletal_2.jpg",
-        descripcion: "Sombrero blanco a gris, poro rojo que enrojece intensamente, retículo rojo en el pie. Tóxico, causa malestar gastrointestinal severo.",
+        imagen: "Boletales/Boletal_1.jpg",
+        descripcion: "Sombrero marrón, poro amarillo inmutable, pie liso.Se caracteriza por su sabor picante, micorrícico con Quercus sp.",
     },
-
     // --- Russulaceae ---
     {
-        nombre: "Russula emetica",
-        nombreComun: "Russula emética",
+        nombre: "Russula sp",
+        nombreComun: "Rusúlas",
         familia: "Russulaceae",
         orden: "Russulales",
         tipo: TIPO.MICORRIZICO,
@@ -212,15 +179,26 @@ const ESPECIES = [
         descripcion: "Sombrero rojo brillante, láminas blancas, pie blanco. Causa vómitos al consumirse. Micorrícica con árboles.",
     },
     {
-        nombre: "Russula cyanoxantha",
-        nombreComun: "Russula azul",
+        nombre: "Lactarius sp",
+        nombreComun: "Hongo de latex",
         familia: "Russulaceae",
         orden: "Russulales",
         tipo: TIPO.MICORRIZICO,
-        comestible: true,
-        toxico: false,
+        comestible: false,
+        toxico: false   ,
         imagen: "Russulales/russulal_2.jpg",
-        descripcion: "Sombrero verde oliva a gris, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
+        descripcion: "Sombrero de color cafe tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
+    },
+    {
+        nombre: "Stereum sp",
+        nombreComun: "Desconocido",
+        familia: "Russulaceae",
+        orden: "Russulales",
+        tipo: TIPO.MICORRIZICO,
+        comestible: false,
+        toxico: false   ,
+        imagen: "Russulales/russulal_2.jpg",
+        descripcion: "Sombrero de color cafe tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
     },
 
     // --- Auriculariaceae ---
@@ -234,19 +212,6 @@ const ESPECIES = [
         toxico: false,
         imagen: "Auriculariales/Auricularia_1.jpg",
         descripcion: "Cuerpo fructífero gelatinoso, forma de oreja, color marrón oscuro. Comestible, muy usada en cocina asiática. Saprófita sobre madera.",
-    },
-
-    // --- Tremellaceae ---
-    {
-        nombre: "Tremella fusiformis",
-        nombreComun: "Tremela fusiforme",
-        familia: "Tremellaceae",
-        orden: "Tremellares",
-        tipo: TIPO.PARASITO,
-        comestible: true,
-        toxico: false,
-        imagen: "Tremellas/tremella_1.jpg",
-        descripcion: "Cuerpo fructífero gelatinoso, forma alargada fusiforme, color amarillo pálido. Parásito de otros hongos. Comestible, usado en medicina tradicional.",
     },
 
     // --- Schizophyllaceae ---
@@ -264,25 +229,25 @@ const ESPECIES = [
 
     // --- Marasmiaceae ---
     {
-        nombre: "Marasmius oreades",
-        nombreComun: "Seta del prado",
+        nombre: "Marasmius",
+        nombreComun: "Hongos paracaidas y afines",
         familia: "Marasmiaceae",
         orden: "Agaricales",
         tipo: TIPO.SAPROFITO,
-        comestible: true,
+        comestible: false,
         toxico: false,
         imagen: "Agaricales/Agarical_2.jpg",
         descripcion: "Pequeña, sombrero marrón con fibras pálidas, láminas blancas, pie delgado. Reviviscente (se rehidrata con lluvia). Comestible.",
     },
 
-    // --- Pleurotaceae ---
+    // ---  crepidotaceae---
     {
-        nombre: "Pleurotus ostreatus",
-        nombreComun: "Ostra o Seta del roble",
-        familia: "Pleurotaceae",
+        nombre: "Crepidots",
+        nombreComun: "Desconocido",
+        familia: "Crepidotaceae",
         orden: "Agaricales",
         tipo: TIPO.SAPROFITO,
-        comestible: true,
+        comestible: false,
         toxico: false,
         imagen: "Agaricales/Agarical_3.jpg",
         descripcion: "Sombrero en forma de abanico u ostra, blanco a gris, láminas decurrentes, pie lateral o ausente. Saprófito sobre madera de roble.",
@@ -300,40 +265,15 @@ const ESPECIES = [
         imagen: "Agaricales/Agarical_4.jpg",
         descripcion: "Sombrero higrófano que cambia de color al secarse, láminas negruzcas, pie delgado y frágil. Saprófita en suelo húmedo.",
     },
-
-    // --- Strophariaceae ---
-    {
-        nombre: "Hypholoma fasciculare",
-        nombreComun: "Fasciculata amarilla",
-        familia: "Strophariaceae",
-        orden: "Agaricales",
-        tipo: TIPO.SAPROFITO,
-        comestible: false,
-        toxico: true,
-        imagen: "Agaricales/Agarical_1.jpg",
-        descripcion: "Sombrero amarillo-verde, láminas verdosas, pie con anillo. Tóxica, crece en racimos sobre tocones de coníferas.",
-    },
-    {
-        nombre: "Pholiota squarrosa",
-        nombreComun: "Pholiota escamosa",
-        familia: "Strophariaceae",
-        orden: "Agaricales",
-        tipo: TIPO.SAPROFITO,
-        comestible: false,
-        toxico: true,
-        imagen: "Agaricales/Agarical_2.jpg",
-        descripcion: "Sombrero cubierto de escamas amarillas, anillo membranoso, láminas amarillas. Saprófita sobre madera viva de árboles caducifolios.",
-    },
-
     // --- Inocybaceae ---
     {
-        nombre: "Inocybe geophylla",
-        nombreComun: "Inocibe terrestre",
+        nombre: "Inocybe sp",
+        nombreComun: "Desconocido",
         familia: "Inocybaceae",
         orden: "Agaricales",
         tipo: TIPO.MICORRIZICO,
         comestible: false,
-        toxico: true,
+        toxico: false,
         imagen: "Agaricales/Agarical_3.jpg",
         descripcion: "Sombrero blanco con fibras pálidos, láminas blancas, pie corto. Contiene muscarina. Micorrícica con Quercus.",
     },
@@ -364,13 +304,13 @@ const ESPECIES = [
 
     // --- Hydnangiaceae ---
     {
-        nombre: "Hydnum repandum",
-        nombreComun: "Piedra de huevo",
+        nombre: "Irpex rossetiformes",
+        nombreComun: "Desconocido",
         familia: "Hydnangiaceae",
         orden: "Agaricales",
         tipo: TIPO.MICORRIZICO,
-        comestible: true,
-        toxico: false,
+        comestible: false,
+        toxico: true,
         imagen: "Agaricales/Agarical_2.jpg",
         descripcion: "Himenoforo de dientes (hidnoides) en lugar de láminas, sombrero convexo, color crema a ocre. Micorrícico, comestible.",
     },
@@ -386,19 +326,6 @@ const ESPECIES = [
         toxico: false,
         imagen: "Agaricales/Agarical_3.jpg",
         descripcion: "Pequeño, sombrero marrón con centro más oscuro, pie cartilaginoso. Saprófito en hojarasca de robles.",
-    },
-
-    // --- Tricholomataceae (extra) ---
-    {
-        nombre: "Collybia dryophila",
-        nombreComun: "Colibia del roble",
-        familia: "Tricholomataceae",
-        orden: "Agaricales",
-        tipo: TIPO.SAPROFITO,
-        comestible: false,
-        toxico: false,
-        imagen: "Agaricales/Agarical_4.jpg",
-        descripcion: "Pequeña, sombrero marrón rojizo, láminas blancas, pie delgado con base hinchada. Saprófita en bosques de roble.",
     },
 
     // --- Psathyrellaceae (extra) ---
@@ -427,26 +354,15 @@ const ESPECIES = [
 
     // --- Strophariaceae (extra) ---
     {
-        nombre: "Stropharia aeruginosa",
-        nombreComun: "Estrofaria azulada",
+        nombre: "Gymnopilus luteofolius",
+        nombreComun: "Desconocido",
         familia: "Strophariaceae",
         orden: "Agaricales",
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: true,
-        imagen: "Agaricales/Agarical_3.jpg",
-        descripcion: "Sombrero verde azulado brillante, anillo blanco, láminas grises. Tóxica, saprófita en suelo de bosques.",
-    },
-    {
-        nombre: "Pholiota adiposa",
-        nombreComun: "Pholiota grasa",
-        familia: "Strophariaceae",
-        orden: "Agaricales",
-        tipo: TIPO.SAPROFITO,
-        comestible: true,
-        toxico: false,
         imagen: "Agaricales/Agarical_4.jpg",
-        descripcion: "Sombrero viscoso y pegajoso, anillo membranoso, láminas oliváceas. Saprófita sobre madera de roble.",
+        descripcion: "Sombrero viscoso y pegajoso de color morado, anillo membranoso, láminas ferruginosas. Saprófita sobre madera de roble.",
     },
 
     // --- Pleurotaceae (extra) ---
@@ -475,7 +391,7 @@ const ESPECIES = [
 
     // --- Sclerodermataceae ---
     {
-        nombre: "Scleroderma sinnamomi",
+        nombre: "Scleroderma sp",
         nombreComun: "Escleroderma",
         familia: "Sclerodermataceae",
         orden: "Boletales",
@@ -511,18 +427,6 @@ const ESPECIES = [
         imagen: "Tremellas/tremella_2.jpg",
         descripcion: "Cuerpo fructífero gelatinoso, color amarillo anaranjado, forma irregular. Parásito de otros hongos corticiáceos.",
     },
-    {
-        nombre: "Tremella encephala",
-        nombreComun: "Tremela cerebral",
-        familia: "Tremellaceae",
-        orden: "Tremellares",
-        tipo: TIPO.PARASITO,
-        comestible: false,
-        toxico: false,
-        imagen: "Tremellas/tremella_3.jpg",
-        descripcion: "Cuerpo fructífero gelatinoso con forma de cerebro, blanco a rosa pálido. Parásito de Stereum hirsutum.",
-    },
-
     // --- Stereaceae ---
     {
         nombre: "Stereum hirsutum",
@@ -538,8 +442,8 @@ const ESPECIES = [
 
     // --- Auriscalpiaceae ---
     {
-        nombre: "Auriscalpium vulgare",
-        nombreComun: "Auriscalpio común",
+        nombre: "Artomyces Pydixiatus",
+        nombreComun: "Desconocido",
         familia: "Auriscalpiaceae",
         orden: "Russulales",
         tipo: TIPO.SAPROFITO,
@@ -547,19 +451,6 @@ const ESPECIES = [
         toxico: false,
         imagen: "Russulales/russulal_1.jpg",
         descripcion: "Pequeño hongo con sombrero convexo cubierto de escamas, pie lateral, himenio de dientes. Saprófito sobre conos de Pinus.",
-    },
-
-    // --- Stereaceae (extra) ---
-    {
-        nombre: "Boidinia tremelloides",
-        nombreComun: "Boidinia tremeloide",
-        familia: "Stereaceae",
-        orden: "Russulales",
-        tipo: TIPO.SAPROFITO,
-        comestible: false,
-        toxico: false,
-        imagen: "Russulales/russulal_2.jpg",
-        descripcion: "Hongo corticiáceo gelatinoso, efímero, sobre madera muerta. Forma cuerpos fructíferos resupinados.",
     },
 ];
 
