@@ -70,7 +70,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Polyporales/Trametes.jpg",
-        descripcion: "Descripción corta trametes.",
+        descripcion: "Hongo de repisa con bandas concéntricas de colores (cola de pavo). Saprófito sobre madera en descomposición.",
     },
     
 
@@ -84,7 +84,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Agaricales/Agaricus.jpg",
-        descripcion: "Descripcion Agaricus leptocaulis.",
+        descripcion: "Sombrero carnoso con láminas libres y anillo en el pie. Saprófito en suelos ricos en materia orgánica.",
     },
     {
         nombre: "Lepiota sp.",
@@ -95,7 +95,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Agaricales/Lepiota.jpg",
-        descripcion: "Descripcion lepiota.",
+        descripcion: "Sombrero con escamas, láminas libres y anillo en el pie. Saprófita en suelos y bordes de bosque.",
     },
     {
         nombre: "Calvatia aff",
@@ -106,7 +106,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Agaricales/Calvatia.jpg",
-        descripcion: "Descripcion calvatia.",
+        descripcion: "Cuerpo fructífero globoso (pedo de lobo). Saprófito en pastizales y suelos abiertos.",
     },
     {
         nombre: "Lepista nuda",
@@ -128,7 +128,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Ascomicetos/Leotia.jpg",
-        descripcion: "Descripcion leotia.",
+        descripcion: "Hongo gelatinoso de color amarillo verdoso, con sombrero viscoso. Saprófito en suelo húmedo y musgo.",
     },
     {
         nombre: "Xerocomus",
@@ -139,7 +139,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Boletales/Xerocomus.jpg",
-        descripcion: "Descripcion de Xerocomus.",
+        descripcion: "Boleto de poros amarillos que azulean al tacto, pie sin retículo. Micorrícico.",
     },
     {
         nombre: "Cortinarius sp",
@@ -150,7 +150,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Agaricales/Cortinarius.jpg",
-        descripcion: "Descripcion Cortinarius.",
+        descripcion: "Sombrero con cortina (velo aracnoideo) en ejemplares jóvenes, esporada ferruginosa. Micorrícico.",
     },
 
     {
@@ -162,7 +162,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Agaricales/Neocampanella.jpg",
-        descripcion: "Descripcion neocampanella",
+        descripcion: "Honguito diminuto en forma de campana sobre madera en descomposición.",
     },
     
     // --- Boletaceae ---
@@ -175,7 +175,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Boletales/Boletal_1.jpg",
-        descripcion: "Sombrero marrón, poro amarillo inmutable, pie liso.Se caracteriza por su sabor picante, micorrícico con Quercus sp.",
+        descripcion: "Sombrero marrón, poro amarillo inmutable, pie liso. Se caracteriza por su sabor picante, micorrícico con Quercus sp.",
     },
     // --- Russulaceae ---
     {
@@ -198,18 +198,18 @@ const ESPECIES = [
         comestible: false,
         toxico: false   ,
         imagen: "Russulales/Lactarius.jpg",
-        descripcion: "Sombrero de color cafe tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
+        descripcion: "Sombrero de color café tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
     },
     {
         nombre: "Stereum sp",
-        nombreComun: "Desconocido",
+        nombreComun: "Hongo de costra zonada",
         familia: "Stereaceae",
         orden: "Russulales",
         tipo: TIPO.SAPROFITO,
         comestible: false,
-        toxico: false   ,
-        imagen: "Russulales/Stereum_sp.jpg",
-        descripcion: "Sombrero de color cafe tomentoso y deprimido centralmente, láminas blancas, pie blanco. Comestible, se distingue por su carne que se rompe en forma de hilo (test de la fibra).",
+        toxico: false,
+        imagen: "Russulales/Stereum.jpg",
+        descripcion: "Hongo en forma de abanico delgado o costra sobre madera, con bandas concéntricas ocres y marrones. Saprófito sobre madera en descomposición.",
     },
 
     // --- Auriculariaceae ---
@@ -286,7 +286,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Agaricales/Inocybe.jpg",
-        descripcion: "Sombrero blanco con fibras pálidos, láminas blancas, pie corto. Contiene muscarina. Micorrícica con Quercus.",
+        descripcion: "Sombrero blanco con fibras pálidas, láminas blancas, pie corto. Contiene muscarina. Micorrícica con Quercus.",
     },
 
     // --- Bolbitaceae ---
@@ -315,7 +315,7 @@ const ESPECIES = [
 
     // --- Hydnangiaceae ---
      {
-        nombre: "laccaria sp",
+        nombre: "Laccaria sp",
         nombreComun: "Desconocido",
         familia: "Hydnangiaceae",
         orden: "Agaricales",
@@ -323,7 +323,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Agaricales/Laccaria.jpg",
-        descripcion: "Himenio en forma de laminas distantes separadas de coloración roja, esporada blanca, de tamaño pequeño y en asociación con accacias.",
+        descripcion: "Himenio en forma de láminas distantes separadas de coloración roja, esporada blanca, de tamaño pequeño y en asociación con acacias.",
     },
     //-- Irpicaceae ---
 
@@ -361,7 +361,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Parassola.jpg",
+        imagen: "Agaricales/Parasola.jpg",
         descripcion: "Sombrero plisado como abanico, deliquescente, negro al madurar. Saprófito en césped y suelo descubierto.",
     },
     {
@@ -383,8 +383,8 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Coprinellus_micaceae.jpg",
-        descripcion: "Gregario entre materia organica en descomposición. Sombrero mediano naranja, láminas negras que se liquefacen. Deliquescente.",
+        imagen: "Agaricales/Coprinellus_micaceus.jpg",
+        descripcion: "Gregario entre materia orgánica en descomposición. Sombrero mediano naranja, láminas negras que se liquefacen. Deliquescente.",
     },
      {
         nombre: "Psathyrella longipes",
@@ -395,7 +395,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Agaricales/Psathyrella_longipes.jpg",
-        descripcion: "Colocar información de Psathyrella longipes",
+        descripcion: "Sombrero acampanado de color marrón que palidece al secarse, pie largo y delgado, láminas oscuras. Saprófita en suelos con restos de madera.",
     },
 
 
@@ -420,7 +420,7 @@ const ESPECIES = [
         comestible: false,
         toxico: true,
         imagen: "Agaricales/Leratiomyces.jpg",
-        descripcion: "Sobrero convexo  de color roj con presencia de escamas en el margen,no presenta anillo, láminas de color gris. Saprófito.",
+        descripcion: "Sombrero convexo de color rojo con presencia de escamas en el margen, no presenta anillo, láminas de color gris. Saprófito.",
     },
 
 
@@ -433,7 +433,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Honhembuhellia.jpg",
+        imagen: "Agaricales/Hohenbuehelia.jpg",
         descripcion: "Forma de pétalo o abanico, cuerpo fructífero gelatinoso. Saprófita sobre madera, nematófaga.",
     },
     {
@@ -444,7 +444,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/Ressupinatus.jpg",
+        imagen: "Agaricales/Resupinatus.jpg",
         descripcion: "Hongo muy pequeño, aplanado, adherido a la madera, color gris a marrón. Saprófito sobre madera en descomposición.",
     },
 
@@ -501,7 +501,7 @@ const ESPECIES = [
 
     // --- Auriscalpiaceae ---
     {
-        nombre: "Artomyces Pydixiatus",
+        nombre: "Artomyces pyxidatus",
         nombreComun: "Desconocido",
         familia: "Auriscalpiaceae",
         orden: "Russulales",
@@ -521,7 +521,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Geastreales/Geastrum.jpg",
-        descripcion: "Hongo en forma de estrella, esporada cafe a negra, rellenar info.",
+        descripcion: "Hongo en forma de estrella, esporada café a negra. Saprófito en suelo.",
     },
     // ---- Ascomicetos --
      {
@@ -533,7 +533,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Ascomicetos/Cordierites.jpg",
-        descripcion: "Colocar informacion cordierites.",
+        descripcion: "Ascomiceto en forma de copa sobre madera en descomposición.",
     },
     //-- Himenochateales --
     {
@@ -545,7 +545,7 @@ const ESPECIES = [
         comestible: false,
         toxico: false,
         imagen: "Himenochaetales/Rickenella.jpg",
-        descripcion: "Colocar informacion Ricknella.",
+        descripcion: "Honguito asociado a musgos, de sombrero pequeño. Saprófito.",
     },
 ];
 
