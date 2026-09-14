@@ -5,7 +5,7 @@ const CONFIG = {
     MIN_CHARS_FOR_SEARCH: 2,
     MAX_SUGGESTIONS: 8,
     AUTO_SLIDE_INTERVAL: 5000,
-    IMG_FALLBACK: "../Agaricales/Agarical_1.jpg",
+    IMG_FALLBACK: "Agaricales/Agarical_1.jpg",
 };
 
 // ============================================================================
@@ -234,7 +234,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Agaricales/schizophyllum .jpg",
+        imagen: "Agaricales/schizophyllum.jpg",
         descripcion: "Pequeño, con himenio de pliegues largos y bifurcados, color blanco a gris. Saprófito sobre madera muerta. Cosmopolita.",
     },
 
@@ -722,7 +722,7 @@ function renderizarResultados() {
                 .map(
                     (e) => `
                 <div class="resultado-card">
-                    <img src="${e.imagen}" alt="${e.nombre}" class="resultado-img" onerror="this.src='${CONFIG.IMG_FALLBACK}'">
+                    <img src="${e.imagen}" alt="${e.nombre}" class="resultado-img" loading="lazy" onerror="this.src='${CONFIG.IMG_FALLBACK}'">
                     <div class="resultado-info">
                         <h3>${e.nombre}</h3>
                         <p class="resultado-comun">${e.nombreComun}</p>

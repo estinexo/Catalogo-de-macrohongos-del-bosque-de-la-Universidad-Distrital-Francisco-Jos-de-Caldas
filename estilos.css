@@ -857,8 +857,12 @@ Carrusel de las imagenes (Optimizado y Redimensionado)
 
 /* ==========================================================================
    10. COMPACTADO SOLO MÓVIL (max-width: 767px) - no afecta escritorio
+   NOTA: Esta parte es la medición móvil del header (head) + nav + logo.
+   Ajusta paddings, tamaños y gaps solo en celular para que no ocupe
+   toda la pantalla. Escritorio (min-width: 768px) no se toca.
    ========================================================================== */
 @media (max-width: 767px) {
+    /* Medición móvil del header */
     header {
         padding: 0.75rem 1rem;
         gap: 0.5rem;
