@@ -106,10 +106,10 @@ nav ul li a.activo {
 }
 
 .logo {
-    max-height: 80px;
-    max-width: 80px;
-    width: auto;
-    height: auto;
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--cafe-medio);
@@ -898,8 +898,8 @@ Carrusel de las imagenes (Optimizado y Redimensionado)
     }
 
     .logo {
-        max-height: 50px;
-        max-width: 50px;
+        width: 50px;
+        height: 50px;
     }
 
     main {
