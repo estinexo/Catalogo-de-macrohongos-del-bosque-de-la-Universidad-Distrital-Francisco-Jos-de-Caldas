@@ -911,4 +911,17 @@ Carrusel de las imagenes (Optimizado y Redimensionado)
     section {
         padding: 1.25rem;
     }
+
+    /* Alturas de carrusel adaptadas a celular (en escritorio: 400/380px) */
+    .slider .slide {
+        height: 230px;
+    }
+
+    .carrusel-slides {
+        height: 230px;
+    }
+
+    .imagen-principal {
+        height: 230px;
+    }
 }

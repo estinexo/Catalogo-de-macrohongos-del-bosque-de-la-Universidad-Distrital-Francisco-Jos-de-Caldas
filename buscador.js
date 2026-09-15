@@ -208,7 +208,7 @@ const ESPECIES = [
         tipo: TIPO.SAPROFITO,
         comestible: false,
         toxico: false,
-        imagen: "Russulales/Stereum.jpg",
+        imagen: "Russulales/Stereum_sp.jpg",
         descripcion: "Hongo en forma de abanico delgado o costra sobre madera, con bandas concéntricas ocres y marrones. Saprófito sobre madera en descomposición.",
     },
 
