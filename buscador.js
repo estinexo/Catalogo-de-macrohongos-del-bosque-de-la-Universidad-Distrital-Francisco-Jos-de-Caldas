@@ -454,7 +454,7 @@ const ESPECIES = [
         nombreComun: "Escleroderma",
         familia: "Sclerodermataceae",
         orden: "Boletales",
-        tipo: TIPO.SAPROFITO,
+        tipo: TIPO.MICORRIZICO,
         comestible: false,
         toxico: true,
         imagen: "Boletales/Scleroderma.jpg",
