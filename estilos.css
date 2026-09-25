@@ -17,14 +17,25 @@
     Imagenes gigantes
    ===========================================================================*/
    .imagen-principal {
-    width: 100%;             /* Se adapta al ancho de la tarjeta */
-    max-width: 700px;        /* Evita que se estire infinitamente en PC */
-    height: 380px;           /* Altura fija y moderna para mantener simetría */
-    object-fit: cover;       /* Recorta la foto armónicamente sin deformarla */
-    border-radius: 8px;      /* Bordes ligeramente suavizados */
-    display: block;
-    margin: 1rem auto;       /* Centra la imagen automáticamente */
-}
+     width: 100%;             /* Se adapta al ancho de la tarjeta */
+     max-width: 700px;        /* Evita que se estire infinitamente en PC */
+     height: 380px;           /* Altura fija y moderna para mantener simetría */
+     object-fit: cover;       /* Recorta la foto armónicamente sin deformarla */
+     border-radius: 8px;      /* Bordes ligeramente suavizados */
+     display: block;
+     margin: 1rem auto;       /* Centra la imagen automáticamente */
+ }
+   .imagen-mapa {
+     width: 100%;
+     max-width: 700px;
+     height: auto;            /* Altura automática para mostrar el mapa completo sin recorte */
+     object-fit: contain;     /* Muestra todo el contenido sin cortar */
+     border-radius: 8px;
+     display: block;
+     margin: 1rem auto;
+     background-color: var(--fondo-principal);
+     border: 1px solid var(--cafe-claro);
+ }
 /* ==========================================================================
    2. ESTILOS BASE Y RESET
    ========================================================================== */
@@ -922,6 +933,10 @@ Carrusel de las imagenes (Optimizado y Redimensionado)
     }
 
     .imagen-principal {
-        height: 230px;
-    }
+         height: 230px;
+     }
+
+     .imagen-mapa {
+         height: auto; /* En móvil también se muestra completo, sin recorte */
+     }
 }
